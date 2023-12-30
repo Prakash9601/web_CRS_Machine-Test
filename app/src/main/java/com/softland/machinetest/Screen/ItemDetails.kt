@@ -18,7 +18,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,9 +36,6 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.softland.machinetest.R
 import com.softland.machinetest.navigation.AllDestinations
-import com.softland.machinetest.utils.ConnectionState
-import com.softland.machinetest.utils.Const
-import com.softland.machinetest.utils.connectivityState
 import com.softland.machinetest.viewModel.MyViewModel
 
 
