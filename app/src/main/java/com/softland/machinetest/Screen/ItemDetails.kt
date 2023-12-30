@@ -43,8 +43,6 @@ import com.softland.machinetest.viewModel.MyViewModel
 @Composable
 fun ItemDetails(myViewModel: MyViewModel = hiltViewModel()) {
 
-
-
     val list = myViewModel.appDatabase?.ProductDao()?.getCategory(AllDestinations.itemsId?.value ?: 0)?.observeAsState()
 
     val scrollState = rememberScrollState()

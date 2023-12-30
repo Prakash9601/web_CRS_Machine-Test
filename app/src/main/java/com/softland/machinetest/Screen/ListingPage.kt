@@ -64,6 +64,13 @@ fun ListingPage(myViewModel: MyViewModel = hiltViewModel()){
    val dpItems = myViewModel.fetchProduct?.observeAsState()
     var loadingProgressBar by remember { mutableStateOf(true) }
 
+    val state by connectivityState()
+
+    val mcontext = LocalContext.current
+
+    if(state == ConnectionState.Unavailable){
+        Const.showToast(mcontext,mcontext.getString(R.string.please_check_your_internet_connection))
+    }
 
     Column(
         modifier = Modifier
